@@ -41,4 +41,9 @@ public class TaskController {
         service.delete(id);
     }
 
+    @GetMapping("/status/{status}")
+    public List<Task> getByStatus(@PathVariable String status) {
+        return service.getByStatus(status);
+    }
+
 }

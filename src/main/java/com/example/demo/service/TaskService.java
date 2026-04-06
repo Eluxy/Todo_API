@@ -43,4 +43,8 @@ public class TaskService {
         repository.deleteById(id);
     }
 
+    public List<Task> getByStatus(String status) {
+        return repository.findByStatus(status);
+    }
+
 }
